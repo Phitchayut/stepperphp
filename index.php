@@ -240,17 +240,8 @@
         }
 
         function onConfirm() {
-            let form = document.getElementById('form-4');
-            if (form) {
-                if (!form.checkValidity()) {
-                    form.classList.add('was-validated');
-                    $('#smartwizard').smartWizard("setState", [3], 'error');
-                    $("#smartwizard").smartWizard('fixHeight');
-                    return false;
-                }
-
-                myModal.show();
-            }
+           const formData = new  FormData($('form')[0])
+           console.log(formData);
         }
 
         function closeModal() {
